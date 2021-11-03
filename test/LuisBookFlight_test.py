@@ -1,8 +1,13 @@
 import json
+import os
 import unittest
 from src.LuisBookFlight import LuisBookFlight
 
 class LuisUnitTest(unittest.TestCase):
+    def test_authFileisHere(self):
+        # Load AuthKeys
+        self.assertTrue(os.path.isfile('.auth'))
+
     def test_LuisBookFlightClass(self):
         # Load AuthKeys
         with open(".auth") as f:
@@ -11,6 +16,8 @@ class LuisUnitTest(unittest.TestCase):
         self.assertIsNotNone(auth_info.get('luis_subscription_key'))
         self.assertIsNotNone(auth_info.get('luis_ep'))
         self.assertIsNotNone(auth_info.get('InstrumentationKey'))
+        self.assertIsNotNone(auth_info.get('MicrosoftAppId'))
+        self.assertIsNotNone(auth_info.get('MicrosoftAppPassword'))
 
         self.auth_info = auth_info
 

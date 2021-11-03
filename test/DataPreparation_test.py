@@ -1,5 +1,7 @@
 import pandas as pd
 import unittest
+import os
+
 from src.DataPreparation import data_preparation
 
 class unitTest(unittest.TestCase):
@@ -10,6 +12,7 @@ class unitTest(unittest.TestCase):
         # Check if it's the right type.
         self.assertTrue(isinstance(train, dict), True)
         self.assertTrue(isinstance(test, list), True)
+
 
 if __name__ == '__main__':
     unittest.main()
