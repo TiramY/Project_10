@@ -1,0 +1,5 @@
+{
+    "luis_subscription_key" : "71108bd9ce6a4ef6b882fdbbcd378ca7",
+    "luis_ep" : "https://westeurope.api.cognitive.microsoft.com",
+    "InstrumentationKey" : "800b9df3-7d71-416f-802b-40a56a232836"
+}
